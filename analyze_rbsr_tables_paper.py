@@ -10,7 +10,7 @@ Generate paper-aligned tables from the Negentropy/AELMDB benchmark CSV.
   available.
 - Family names are normalized to the paper style, e.g. base_dense_i.
 - Backend order matches the paper:
-    Vector, BTreeLMDB, NoCacheAELMDB, AELMDB.
+    Vector, BTreeLMDB, NoWndAELMDB, AELMDB.
 
 Usage:
     python analyze_rbsr_tables_paper.py results.csv
@@ -58,7 +58,7 @@ BACKEND_LATEX = {
     "Vector": r"\texttt{Vector}",
     "BTreeLMDB": r"\texttt{BTreeLMDB}",
     "AELMDBSlice": r"\texttt{AELMDB}",
-    "NoAggWindowSliceAELMDB": r"\texttt{NoCacheAELMDB}",
+    "NoAggWindowSliceAELMDB": r"\texttt{NoWndAELMDB}",
 }
 
 

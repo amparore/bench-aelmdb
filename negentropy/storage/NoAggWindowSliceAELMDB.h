@@ -23,7 +23,7 @@ namespace negentropy { namespace storage {
  *
  * This implementation is a benchmark/storage counterpart to SliceAELMDB:
  * it preserves the same TSID key interpretation, slice semantics, and public
- * interface, but computes slice mapping and fingerprints using only:
+ * interface, but computes slice mapping and range aggregates using only:
  *   - dbi.totals()
  *   - dbi.rank(..., lmdb::agg_weight::entries, lmdb::agg_rank_mode::set_range, ...)
  *   - dbi.select(...)
@@ -32,7 +32,7 @@ namespace negentropy { namespace storage {
  *
  * It deliberately does NOT use:
  *   - MDB_agg_window
- *   - dbi.window_fingerprint(...)
+ *   - dbi.window_aggregate(...)
  *   - dbi.window_rank(...)
  *
  * Required DBI schema (checked at runtime in the constructor):
